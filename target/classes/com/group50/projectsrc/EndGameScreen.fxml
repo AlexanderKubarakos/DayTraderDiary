@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group50.projectsrc.EndGameScreenController">
+   <children>
+      <Text layoutX="347.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Game Over!">
+         <font>
+            <Font name="System Bold" size="48.0" />
+         </font>
+      </Text>
+      <Text layoutX="359.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" text="You finished all 5 days!">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text layoutX="209.0" layoutY="211.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Your final money after selling all your held stocks">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Text>
+      <Text fx:id="finalMoney" layoutX="432.0" layoutY="256.0" strokeType="OUTSIDE" strokeWidth="0.0" text="10000">
+         <font>
+            <Font name="System Bold Italic" size="33.0" />
+         </font>
+      </Text>
+      <Text layoutX="228.0" layoutY="296.0" strokeType="OUTSIDE" strokeWidth="0.0" text="You started with $1000 so your profit (or loss)">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Text>
+      <Text fx:id="finalProfit" layoutX="432.0" layoutY="341.0" strokeType="OUTSIDE" strokeWidth="0.0" text="10000">
+         <font>
+            <Font name="System Bold Italic" size="33.0" />
+         </font>
+      </Text>
+      <Button fx:id="logout" layoutX="402.0" layoutY="550.0" mnemonicParsing="false" onAction="#logOut" prefHeight="94.0" prefWidth="157.0" text="Logout">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Button>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Text layoutX="177.0" layoutY="507.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Don't forget to look at the leader board">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Text>
+   </children>
+</Pane>

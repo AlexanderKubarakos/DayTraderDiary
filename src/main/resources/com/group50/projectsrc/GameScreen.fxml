@@ -1,0 +1,615 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group50.projectsrc.GameScreenController">
+   <children>
+      <Button fx:id="settingsOpen" layoutX="860.0" layoutY="675.0" mnemonicParsing="false" onAction="#OpenBtn" prefHeight="27.0" prefWidth="89.0" text="Settings">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Pane fx:id="news" layoutX="14.0" layoutY="588.0" prefHeight="119.0" prefWidth="767.0" style="-fx-border-color: black;">
+         <children>
+            <ImageView fx:id="newsImage" fitHeight="100.0" fitWidth="100.0" layoutX="14.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true" />
+            <Text fx:id="newsTitle" layoutX="173.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sample Title" textAlignment="CENTER" visible="false" wrappingWidth="405.0">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font></Text>
+            <TextArea fx:id="newsText" editable="false" focusTraversable="false" layoutX="139.0" layoutY="37.0" prefHeight="60.0" prefWidth="489.0" scaleShape="false" visible="false" wrapText="true">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </TextArea>
+            <Text layoutX="591.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MONKEY NEWS">
+               <font>
+                  <Font size="24.0" />
+               </font></Text>
+         </children></Pane>
+      <TabPane fx:id="stocks" layoutX="15.0" layoutY="15.0" prefHeight="559.0" prefWidth="931.0" side="BOTTOM" style="-fx-border-color: black;" tabClosingPolicy="UNAVAILABLE">
+         <tabs>
+            <Tab fx:id="techButton" text="TECH">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="sAPL" layoutX="820.0" layoutY="75.0" mnemonicParsing="false" onAction="#bsButton" prefHeight="75.0" prefWidth="75.0" text="Sell">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="bAPL" layoutX="715.0" layoutY="75.0" mnemonicParsing="false" onAction="#bsButton" prefHeight="75.0" prefWidth="75.0" text="Buy">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="bNVDA" layoutX="715.0" layoutY="225.0" mnemonicParsing="false" onAction="#bsButton" prefHeight="75.0" prefWidth="75.0" text="Buy">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="sNVDA" layoutX="820.0" layoutY="225.0" mnemonicParsing="false" onAction="#bsButton" prefHeight="75.0" prefWidth="75.0" text="Sell">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="sINT" layoutX="820.0" layoutY="375.0" mnemonicParsing="false" onAction="#bsButton" prefHeight="75.0" prefWidth="75.0" text="Sell">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="bINT" layoutX="715.0" layoutY="375.0" mnemonicParsing="false" onAction="#bsButton" prefHeight="75.0" prefWidth="75.0" text="Buy">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                        </Button>
+                        <LineChart fx:id="gAPL" layoutX="30.0" layoutY="38.0" prefHeight="150.0" prefWidth="500.0">
+                           <xAxis>
+                              <NumberAxis side="BOTTOM" fx:id="xAxisAPL" />
+                           </xAxis>
+                           <yAxis>
+                              <NumberAxis fx:id="yAxisAPL" side="LEFT" />
+                           </yAxis>
+                        </LineChart>
+                        <LineChart fx:id="gNVDA" layoutX="30.0" layoutY="188.0" prefHeight="150.0" prefWidth="500.0">
+                           <xAxis>
+                              <NumberAxis side="BOTTOM" fx:id="xAxisNVDA" />
+                           </xAxis>
+                           <yAxis>
+                              <NumberAxis fx:id="yAxisNVDA" side="LEFT" />
+                           </yAxis>
+                        </LineChart>
+                        <LineChart fx:id="gINT" layoutX="30.0" layoutY="338.0" prefHeight="150.0" prefWidth="500.0">
+                           <xAxis>
+                              <NumberAxis side="BOTTOM" fx:id="xAxisINT" />
+                           </xAxis>
+                           <yAxis>
+                              <NumberAxis fx:id="yAxisINT" side="LEFT" />
+                           </yAxis>
+                        </LineChart>
+                        <Text fx:id="tAPL" layoutX="520.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Apple - APL" textAlignment="CENTER" wrappingWidth="190.0">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="tAPLprice" layoutX="527.0" layoutY="91.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current Price:" wrappingWidth="190.0" />
+                        <Text fx:id="tAPLhold" layoutX="527.0" layoutY="118.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Number of Shares: " wrappingWidth="190.0" />
+                        <Text fx:id="tNVDA" layoutX="520.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nvidia - NVDA" textAlignment="CENTER" wrappingWidth="190.0">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="tINT" layoutX="520.0" layoutY="354.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Intel - INT" textAlignment="CENTER" wrappingWidth="190.0">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="tNVDAprice" layoutX="527.0" layoutY="241.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current Price:" wrappingWidth="190.0" />
+                        <Text fx:id="tNVDAhold" layoutX="527.0" layoutY="269.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Number of Shares: " wrappingWidth="190.0" />
+                        <Text fx:id="tINTprice" layoutX="527.0" layoutY="391.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current Price:" wrappingWidth="190.0" />
+                        <Text fx:id="tINThold" layoutX="527.0" layoutY="419.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Number of Shares: " wrappingWidth="190.0" />
+                        <Button fx:id="saAPL" layoutX="820.0" layoutY="161.0" mnemonicParsing="false" onAction="#saButton" prefHeight="27.0" prefWidth="75.0" text="Sell All">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="saNVDA" layoutX="820.0" layoutY="311.0" mnemonicParsing="false" onAction="#saButton" prefHeight="27.0" prefWidth="75.0" text="Sell All">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="saINT" layoutX="820.0" layoutY="461.0" mnemonicParsing="false" onAction="#saButton" prefHeight="27.0" prefWidth="75.0" text="Sell All">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="foodButton" text="FOOD">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="sLOB" layoutX="820.0" layoutY="75.0" mnemonicParsing="false" onAction="#bsButton" prefHeight="75.0" prefWidth="75.0" text="Sell">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="bMET" layoutX="715.0" layoutY="225.0" mnemonicParsing="false" onAction="#bsButton" prefHeight="75.0" prefWidth="75.0" text="Buy">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="bLOB" layoutX="715.0" layoutY="75.0" mnemonicParsing="false" onAction="#bsButton" prefHeight="75.0" prefWidth="75.0" text="Buy">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="sMET" layoutX="820.0" layoutY="225.0" mnemonicParsing="false" onAction="#bsButton" prefHeight="75.0" prefWidth="75.0" text="Sell">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="sGOR" layoutX="820.0" layoutY="375.0" mnemonicParsing="false" onAction="#bsButton" prefHeight="75.0" prefWidth="75.0" text="Sell">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="bGOR" layoutX="715.0" layoutY="375.0" mnemonicParsing="false" onAction="#bsButton" prefHeight="75.0" prefWidth="75.0" text="Buy">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                        </Button>
+                        <LineChart fx:id="gMET" layoutX="30.0" layoutY="38.0" prefHeight="150.0" prefWidth="500.0">
+                           <xAxis>
+                              <NumberAxis side="BOTTOM" fx:id="xAxisLOB" />
+                           </xAxis>
+                           <yAxis>
+                              <NumberAxis fx:id="yAxisLOB" side="LEFT" />
+                           </yAxis>
+                        </LineChart>
+                        <LineChart fx:id="gLOB" layoutX="30.0" layoutY="188.0" prefHeight="150.0" prefWidth="500.0">
+                           <xAxis>
+                              <NumberAxis side="BOTTOM" fx:id="xAxisMET" />
+                           </xAxis>
+                           <yAxis>
+                              <NumberAxis fx:id="yAxisMET" side="LEFT" />
+                           </yAxis>
+                        </LineChart>
+                        <LineChart fx:id="gGOR" layoutX="30.0" layoutY="338.0" prefHeight="150.0" prefWidth="500.0">
+                           <xAxis>
+                              <NumberAxis side="BOTTOM" fx:id="xAxisGOR" />
+                           </xAxis>
+                           <yAxis>
+                              <NumberAxis fx:id="yAxisGOR" side="LEFT" />
+                           </yAxis>
+                        </LineChart>
+                        <Text fx:id="tLOB" layoutX="520.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Loblaws - LOB" textAlignment="CENTER" wrappingWidth="190.0">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="tMET" layoutX="520.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Metro Foods - MET" textAlignment="CENTER" wrappingWidth="190.0">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="tGOR" layoutX="520.0" layoutY="354.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gordon Foods - GOR" textAlignment="CENTER" wrappingWidth="190.0">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="tLOBprice" layoutX="527.0" layoutY="91.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current Price:" wrappingWidth="190.0" />
+                        <Text fx:id="tLOBhold" layoutX="527.0" layoutY="118.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Number of Shares: " wrappingWidth="190.0" />
+                        <Text fx:id="tMETprice" layoutX="527.0" layoutY="241.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current Price:" wrappingWidth="190.0" />
+                        <Text fx:id="tMEThold" layoutX="527.0" layoutY="269.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Number of Shares: " wrappingWidth="190.0" />
+                        <Text fx:id="tGORprice" layoutX="527.0" layoutY="391.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current Price:" wrappingWidth="190.0" />
+                        <Text fx:id="tGORhold" layoutX="527.0" layoutY="419.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Number of Shares: " wrappingWidth="190.0" />
+                        <Button fx:id="saLOB" layoutX="820.0" layoutY="161.0" mnemonicParsing="false" onAction="#saButton" prefHeight="27.0" prefWidth="75.0" text="Sell All">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="saMET" layoutX="820.0" layoutY="311.0" mnemonicParsing="false" onAction="#saButton" prefHeight="27.0" prefWidth="75.0" text="Sell All">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="saGOR" layoutX="820.0" layoutY="461.0" mnemonicParsing="false" onAction="#saButton" prefHeight="27.0" prefWidth="75.0" text="Sell All">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="bankingButton" text="BANKING">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="sTDB" layoutX="820.0" layoutY="75.0" mnemonicParsing="false" onAction="#bsButton" prefHeight="75.0" prefWidth="75.0" text="Sell">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="bTDB" layoutX="715.0" layoutY="75.0" mnemonicParsing="false" onAction="#bsButton" prefHeight="75.0" prefWidth="75.0" text="Buy">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="bSCO" layoutX="715.0" layoutY="225.0" mnemonicParsing="false" onAction="#bsButton" prefHeight="75.0" prefWidth="75.0" text="Buy">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="sSCO" layoutX="820.0" layoutY="225.0" mnemonicParsing="false" onAction="#bsButton" prefHeight="75.0" prefWidth="75.0" text="Sell">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="sBMO" layoutX="820.0" layoutY="375.0" mnemonicParsing="false" onAction="#bsButton" prefHeight="75.0" prefWidth="75.0" text="Sell">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="bBMO" layoutX="715.0" layoutY="375.0" mnemonicParsing="false" onAction="#bsButton" prefHeight="75.0" prefWidth="75.0" text="Buy">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                        </Button>
+                        <LineChart fx:id="gTDB" layoutX="30.0" layoutY="38.0" prefHeight="150.0" prefWidth="500.0">
+                           <xAxis>
+                              <NumberAxis side="BOTTOM" fx:id="xAxisTDB" />
+                           </xAxis>
+                           <yAxis>
+                              <NumberAxis fx:id="yAxisTDB" side="LEFT" />
+                           </yAxis>
+                        </LineChart>
+                        <LineChart fx:id="gSCO" layoutX="30.0" layoutY="188.0" prefHeight="150.0" prefWidth="500.0">
+                           <xAxis>
+                              <NumberAxis side="BOTTOM" fx:id="xAxisSCO" />
+                           </xAxis>
+                           <yAxis>
+                              <NumberAxis fx:id="yAxisSCO" side="LEFT" />
+                           </yAxis>
+                        </LineChart>
+                        <LineChart fx:id="gBMO" layoutX="30.0" layoutY="338.0" prefHeight="150.0" prefWidth="500.0">
+                           <xAxis>
+                              <NumberAxis side="BOTTOM" fx:id="xAxisBMO" />
+                           </xAxis>
+                           <yAxis>
+                              <NumberAxis fx:id="yAxisBMO" side="LEFT" />
+                           </yAxis>
+                        </LineChart>
+                        <Text fx:id="tTDB" layoutX="520.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Toronto Dominian Bank - TDB" textAlignment="CENTER" wrappingWidth="190.0">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="tSCO" layoutX="520.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Scotia Bank - SCO" textAlignment="CENTER" wrappingWidth="190.0">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="tBMO" layoutX="520.0" layoutY="354.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bank of Montreal - BMO" textAlignment="CENTER" wrappingWidth="190.0">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="tTDBprice" layoutX="527.0" layoutY="91.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current Price:" wrappingWidth="190.0" />
+                        <Text fx:id="tTDBhold" layoutX="527.0" layoutY="118.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Number of Shares: " wrappingWidth="190.0" />
+                        <Text fx:id="tSCOprice" layoutX="527.0" layoutY="241.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current Price:" wrappingWidth="190.0" />
+                        <Text fx:id="tSCOhold" layoutX="527.0" layoutY="269.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Number of Shares: " wrappingWidth="190.0" />
+                        <Text fx:id="tBMOprice" layoutX="527.0" layoutY="391.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current Price:" wrappingWidth="190.0" />
+                        <Text fx:id="tBMOhold" layoutX="527.0" layoutY="419.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Number of Shares: " wrappingWidth="190.0" />
+                        <Button fx:id="saTDB" layoutX="820.0" layoutY="162.0" mnemonicParsing="false" onAction="#saButton" prefHeight="27.0" prefWidth="75.0" text="Sell All">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="saSCO" layoutX="820.0" layoutY="311.0" mnemonicParsing="false" onAction="#saButton" prefHeight="27.0" prefWidth="75.0" text="Sell All">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="saBMO" layoutX="820.0" layoutY="461.0" mnemonicParsing="false" onAction="#saButton" prefHeight="27.0" prefWidth="75.0" text="Sell All">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="luxuryButton" text="LUXURY">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="sSUN" layoutX="820.0" layoutY="75.0" mnemonicParsing="false" onAction="#bsButton" prefHeight="75.0" prefWidth="75.0" text="Sell">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="bSUN" layoutX="715.0" layoutY="75.0" mnemonicParsing="false" onAction="#bsButton" prefHeight="75.0" prefWidth="75.0" text="Buy">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="bBEW" layoutX="715.0" layoutY="225.0" mnemonicParsing="false" onAction="#bsButton" prefHeight="75.0" prefWidth="75.0" text="Buy">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="sBEW" layoutX="820.0" layoutY="225.0" mnemonicParsing="false" onAction="#bsButton" prefHeight="75.0" prefWidth="75.0" text="Sell">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="sROR" layoutX="820.0" layoutY="375.0" mnemonicParsing="false" onAction="#bsButton" prefHeight="75.0" prefWidth="75.0" text="Sell">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="bROR" layoutX="715.0" layoutY="375.0" mnemonicParsing="false" onAction="#bsButton" prefHeight="75.0" prefWidth="75.0" text="Buy">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                        </Button>
+                        <LineChart fx:id="gSUN" layoutX="30.0" layoutY="38.0" prefHeight="150.0" prefWidth="500.0">
+                           <xAxis>
+                              <NumberAxis side="BOTTOM" fx:id="xAxisSUN" />
+                           </xAxis>
+                           <yAxis>
+                              <NumberAxis fx:id="yAxisSUN" side="LEFT" />
+                           </yAxis>
+                        </LineChart>
+                        <LineChart fx:id="gBEW" layoutX="30.0" layoutY="188.0" prefHeight="150.0" prefWidth="500.0">
+                           <xAxis>
+                              <NumberAxis side="BOTTOM" fx:id="xAxisBEW" />
+                           </xAxis>
+                           <yAxis>
+                              <NumberAxis fx:id="yAxisBEW" side="LEFT" />
+                           </yAxis>
+                        </LineChart>
+                        <LineChart fx:id="gROR" layoutX="30.0" layoutY="338.0" prefHeight="150.0" prefWidth="500.0">
+                           <xAxis>
+                              <NumberAxis side="BOTTOM" fx:id="xAxisROR" />
+                           </xAxis>
+                           <yAxis>
+                              <NumberAxis fx:id="yAxisROR" side="LEFT" />
+                           </yAxis>
+                        </LineChart>
+                        <Text fx:id="tSUN" layoutX="520.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sunwing Airlines - SUN" textAlignment="CENTER" wrappingWidth="190.0">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="tBEW" layoutX="520.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Best Western - BEW" textAlignment="CENTER" wrappingWidth="190.0">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="tROR" layoutX="520.0" layoutY="354.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rolls-Royce - ROR" textAlignment="CENTER" wrappingWidth="190.0">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="tSUNprice" layoutX="527.0" layoutY="91.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current Price:" wrappingWidth="190.0" />
+                        <Text fx:id="tSUNhold" layoutX="527.0" layoutY="118.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Number of Shares: " wrappingWidth="190.0" />
+                        <Text fx:id="tBEWprice" layoutX="527.0" layoutY="241.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current Price:" wrappingWidth="190.0" />
+                        <Text fx:id="tBEWhold" layoutX="527.0" layoutY="269.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Number of Shares: " wrappingWidth="190.0" />
+                        <Text fx:id="tRORprice" layoutX="527.0" layoutY="391.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current Price:" wrappingWidth="190.0" />
+                        <Text fx:id="tRORhold" layoutX="527.0" layoutY="419.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Number of Shares: " wrappingWidth="190.0" />
+                        <Button fx:id="saSUN" layoutX="820.0" layoutY="162.0" mnemonicParsing="false" onAction="#saButton" prefHeight="27.0" prefWidth="75.0" text="Sell All">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="saBEW" layoutX="820.0" layoutY="311.0" mnemonicParsing="false" onAction="#saButton" prefHeight="27.0" prefWidth="75.0" text="Sell All">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="saROR" layoutX="820.0" layoutY="461.0" mnemonicParsing="false" onAction="#saButton" prefHeight="27.0" prefWidth="75.0" text="Sell All">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+      <Button fx:id="devModeOpen" layoutX="790.0" layoutY="676.0" mnemonicParsing="false" onAction="#OpenBtn" prefHeight="17.0" prefWidth="60.0" text="Dev" visible="false">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Pane fx:id="settings" layoutX="341.0" layoutY="205.0" prefHeight="193.0" prefWidth="314.0" style="-fx-border-color: black; -fx-background-color: white;" visible="false">
+         <children>
+            <Text layoutX="16.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Settings">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Text>
+            <Button fx:id="settingsExit" layoutX="256.0" layoutY="12.0" mnemonicParsing="false" onAction="#ExitBtn" text="Exit" />
+            <Button layoutX="14.0" layoutY="111.0" mnemonicParsing="false" onAction="#actDevMode" text="Dev Mode" />
+            <Button fx:id="exitwoSave" layoutX="176.0" layoutY="122.0" mnemonicParsing="false" onAction="#ExitBtn" prefHeight="60.0" prefWidth="125.0" style="-fx-background-color: pink; -fx-border-color: black;" text="Exit Game Without Saving" textAlignment="CENTER" wrapText="true" />
+            <Slider fx:id="sfxSlider" layoutX="80.0" layoutY="48.0" snapToTicks="true" value="100.0" />
+            <Slider fx:id="musicSlider" layoutX="81.0" layoutY="77.0" value="100.0" />
+            <Text layoutX="22.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SFX" />
+            <Text layoutX="22.0" layoutY="91.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MUSIC" />
+            <Button layoutX="14.0" layoutY="149.0" mnemonicParsing="false" onAction="#audioConfirm" text="Confirm Changes" />
+         </children>
+      </Pane>
+      <Pane fx:id="devModePane" layoutX="15.0" layoutY="15.0" prefHeight="400.0" prefWidth="525.0" style="-fx-border-color: black; -fx-background-color: white;" visible="false">
+         <children>
+            <Button fx:id="devModeExit" layoutX="471.0" layoutY="7.0" mnemonicParsing="false" onAction="#ExitBtn" text="Exit" />
+            <Text layoutX="14.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dev Mode" />
+            <Button fx:id="setShareOpen" layoutX="15.0" layoutY="50.0" mnemonicParsing="false" onAction="#OpenBtn" prefHeight="39.0" prefWidth="125.0" text="Set Shares">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="setBalanceOpen" layoutX="15.0" layoutY="170.0" mnemonicParsing="false" onAction="#OpenBtn" prefHeight="39.0" prefWidth="125.0" text="Set Balance">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="pauseButton" layoutX="15.0" layoutY="230.0" mnemonicParsing="false" onAction="#pauseUnpause" prefHeight="39.0" prefWidth="172.0" text="Pause/Continue Time">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="setDayOpen" layoutX="15.0" layoutY="350.0" mnemonicParsing="false" onAction="#OpenBtn" prefHeight="39.0" prefWidth="125.0" text="Set Day">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="setTimeOpen" layoutX="15.0" layoutY="290.0" mnemonicParsing="false" onAction="#OpenBtn" prefHeight="39.0" prefWidth="125.0" text="Set Time">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="setEventOpen" layoutX="15.0" layoutY="110.0" mnemonicParsing="false" onAction="#OpenBtn" prefHeight="39.0" prefWidth="100.0" text="Set Event">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="exitDevMode" layoutX="346.0" layoutY="350.0" mnemonicParsing="false" onAction="#ExitBtn" prefHeight="39.0" prefWidth="150.0" text="Exit Dev Mode">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="displayEventOpen" layoutX="126.0" layoutY="110.0" mnemonicParsing="false" onAction="#OpenBtn" prefHeight="39.0" prefWidth="125.0" text="Display Event">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="356.0" layoutY="50.0" mnemonicParsing="false" onAction="#unlockAll" prefHeight="39.0" prefWidth="140.0" text="Unlock All Sectors">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="407.0" layoutY="104.0" mnemonicParsing="false" onAction="#endDay" prefHeight="39.0" prefWidth="89.0" text="End Day">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="setLevelOpen" layoutX="407.0" layoutY="161.0" mnemonicParsing="false" onAction="#OpenBtn" prefHeight="39.0" prefWidth="89.0" text="Set Level">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Pane fx:id="setShareAmountScreen" layoutX="227.0" layoutY="229.0" prefHeight="204.0" prefWidth="495.0" style="-fx-border-color: black; -fx-background-color: white;" visible="false">
+         <children>
+            <Button fx:id="exitSetSharesMenu" layoutX="423.0" layoutY="20.0" mnemonicParsing="false" onAction="#ExitBtn" text="Exit" />
+            <Label fx:id="setShareTitle" layoutX="199.0" layoutY="24.0" text="Set Share Amount" />
+            <TextField fx:id="selectShareAmountSetShare" layoutX="230.0" layoutY="142.0" promptText="Select Share Amount:" />
+            <Button fx:id="confirmSetShare" layoutX="411.0" layoutY="141.0" mnemonicParsing="false" onAction="#confirmNewShareAmount" text="Confirm" />
+            <ComboBox fx:id="selectCompanySetShare" layoutX="26.0" layoutY="86.0" prefWidth="150.0" promptText="Select Company" />
+         </children>
+      </Pane>
+      <Pane fx:id="setBalanceScreen" layoutX="233.0" layoutY="243.0" prefHeight="172.0" prefWidth="495.0" style="-fx-border-color: black; -fx-background-color: white;" visible="false">
+         <children>
+            <Button fx:id="setBalanceMenuExit" layoutX="423.0" layoutY="20.0" mnemonicParsing="false" onAction="#ExitBtn" text="Exit" />
+            <Label fx:id="balanceTitle" layoutX="214.0" layoutY="24.0" text="Set Balance" />
+            <Button fx:id="confirmNewBalance" layoutX="408.0" layoutY="95.0" mnemonicParsing="false" onAction="#confirmNewBalance" text="Confirm" />
+            <TextField fx:id="enterBalance" layoutX="163.0" layoutY="96.0" promptText="Select Share Amount:" />
+         </children>
+      </Pane>
+      <Pane fx:id="setTimeScreen" layoutX="243.0" layoutY="264.0" prefHeight="146.0" prefWidth="495.0" style="-fx-border-color: black; -fx-background-color: white;" visible="false">
+         <children>
+            <Button fx:id="setTimeExit" layoutX="423.0" layoutY="20.0" mnemonicParsing="false" onAction="#ExitBtn" text="Exit" />
+            <Label fx:id="setTimeTitle" layoutX="215.0" layoutY="24.0" text="Set Time" />
+            <Button fx:id="confirmTime" layoutX="411.0" layoutY="78.0" mnemonicParsing="false" onAction="#confirmNewTime" text="Confirm" />
+            <TextField fx:id="timeTextBox" layoutX="152.0" layoutY="80.0" promptText="Enter New Time" />
+         </children>
+      </Pane>
+      <Pane fx:id="setDateScreen" layoutX="252.0" layoutY="261.0" prefHeight="172.0" prefWidth="495.0" style="-fx-border-color: black; -fx-background-color: white;" visible="false">
+         <children>
+            <Button fx:id="setDateExit" layoutX="423.0" layoutY="20.0" mnemonicParsing="false" onAction="#ExitBtn" text="Exit" />
+            <Label fx:id="setDateTitle" layoutX="217.0" layoutY="24.0" text="Set Date" />
+            <Button fx:id="confirmDay" layoutX="386.0" layoutY="90.0" mnemonicParsing="false" onAction="#confirmNewDate" text="Confirm" />
+            <TextField fx:id="enterDay" layoutX="142.0" layoutY="90.0" promptText="Select Day" />
+
+         </children>
+      </Pane>
+      <Pane fx:id="setEventScreen" layoutX="232.0" layoutY="255.0" prefHeight="146.0" prefWidth="495.0" style="-fx-border-color: black; -fx-background-color: white;" visible="false">
+         <children>
+            <Button fx:id="setEventExit" layoutX="423.0" layoutY="20.0" mnemonicParsing="false" onAction="#ExitBtn" text="Exit" />
+            <Label fx:id="setBreakingNewsTitle" layoutX="224.0" layoutY="24.0" text="Set Event" />
+            <Button fx:id="confirmEvent" layoutX="407.0" layoutY="74.0" mnemonicParsing="false" onAction="#confirmEvent" text="Confirm" />
+            <ComboBox fx:id="selectEvent" layoutX="51.0" layoutY="74.0" prefWidth="150.0" promptText="Select Event" />
+
+         </children>
+      </Pane>
+      <Text fx:id="currBalance" layoutX="786.0" layoutY="607.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sample Money">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Text>
+      <Text fx:id="currTime" layoutX="873.0" layoutY="638.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TIME" wrappingWidth="68.59130859375">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Text>
+      <Text fx:id="currDay" layoutX="786.0" layoutY="638.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DAY: #" wrappingWidth="88.59130859375">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Text>
+      <Pane fx:id="displayEventScreen" layoutX="242.0" layoutY="265.0" prefHeight="146.0" prefWidth="495.0" style="-fx-border-color: black; -fx-background-color: white;" visible="false">
+         <children>
+            <Button fx:id="displayEventExit" layoutX="423.0" layoutY="20.0" mnemonicParsing="false" onAction="#ExitBtn" text="Exit" />
+            <Label fx:id="setBreakingNewsTitle1" layoutX="215.0" layoutY="25.0" text="Display Event" />
+            <Button fx:id="displayEvent" layoutX="407.0" layoutY="74.0" mnemonicParsing="false" onAction="#displayEventConfirm" text="Confirm" />
+            <ComboBox fx:id="selectDisplayEvent" layoutX="51.0" layoutY="74.0" prefWidth="150.0" promptText="Select Event" />
+         </children>
+      </Pane>
+      <Pane fx:id="displayPassword" layoutX="311.0" layoutY="252.0" prefHeight="146.0" prefWidth="314.0" style="-fx-border-color: black; -fx-background-color: white;" visible="false">
+         <children>
+            <PasswordField fx:id="passwordInput" layoutX="21.0" layoutY="74.0" promptText="Password" />
+            <Button fx:id="displayPasswordExit" layoutX="248.0" layoutY="28.0" mnemonicParsing="false" onAction="#ExitBtn" text="Exit" />
+            <Label fx:id="setBreakingNewsTitle11" layoutX="21.0" layoutY="26.0" text="Enter Password">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Button fx:id="displayPasswordConfirm" layoutX="222.0" layoutY="74.0" mnemonicParsing="false" onAction="#displayPasswordConfirm" text="Confirm" />
+         </children>
+      </Pane>
+      <Pane fx:id="setLevelScreen" layoutX="262.0" layoutY="271.0" prefHeight="172.0" prefWidth="495.0" style="-fx-border-color: black; -fx-background-color: white;" visible="false">
+         <children>
+            <Button fx:id="setLevelExit" layoutX="423.0" layoutY="20.0" mnemonicParsing="false" onAction="#ExitBtn" text="Exit" />
+            <Label fx:id="setDateTitle1" layoutX="177.0" layoutY="25.0" text="Set Progression Level" />
+            <Button fx:id="confirmLevel" layoutX="386.0" layoutY="90.0" mnemonicParsing="false" onAction="#confirmNewLevel" text="Confirm" />
+            <TextField fx:id="enterLevel" layoutX="142.0" layoutY="90.0" promptText="Set Level 1-4" />
+         </children>
+      </Pane>
+      <Text fx:id="tLevel" layoutX="786.0" layoutY="667.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LEVEL: #" wrappingWidth="134.07470703125">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Text>
+   </children>
+</Pane>

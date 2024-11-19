@@ -1,0 +1,1 @@
+copy ..\target\Day-Trader-Diary-1.0.jar .\

@@ -1,0 +1,294 @@
+boolean groupEffect
+String stockNameToAffect
+StockGroup stockGroupToAffect
+float deltaExpectedReturn
+float deltaStandardDeviation
+float deltaPrice
+int ID
+String imageLocation
+String title
+String description
+
+false
+Apple
+TECH
+-10
+2
+-5
+0
+munir.jpg
+Apple CEO Caught!
+During big tech conference Apple CEO caught using android phones!
+This does not inspire confidence in Apple customers.
+
+true
+NA
+FOOD
+10
+-2
+2
+1
+munir.jpg
+Celeb Food Buy-Back
+Notable celebs in the movie industry have decided they need to hoard food! They
+are offering to buy food back from normal people at big markups. This will surely raise the value of food
+
+true
+stockNameToAffect
+LUXURY
+-20
+10
+-6
+2
+munir.jpg
+Luxury Scandal
+People have noticed that luxury brands and really just a waste of money. Now poorly fabricated clothes
+are back in fashion! Bye bye high-end brands!
+
+false
+NVIDIA
+TECH
+6
+3
+3
+3
+images/NVIDIANEWCARDHAHAHA.png
+Graphics Galore!
+NVIDIA announces their newest 6990 TRX PRO graphics card with never before seen
+technology
+
+false
+Intel
+TECH
+8
+6
+7
+4
+images/IntelVSAMDisCrazy.png
+Process Power!
+Intel CEO announces he will be boxing the CEO of AMD for 1 Million Dollars,
+fans are in support of Intel
+
+false
+Loblaws
+FOOD
+-5
+3
+-4
+5
+images/loblaws.png
+Growing Groceries!
+Prices skyrocket at Loblaws Grocery stores, leaving consumers to reconsider
+their shopping habits
+
+false
+Metro
+FOOD
+8
+5
+8
+6
+images/metroFoodsRoast.png
+METROOO!
+Metro Foods Twitter account has been on fire recently by roasting its fans and
+rivaling companies. Twitter can't get enough of it.
+
+false
+Gordon Foods
+FOOD
+-8
+8
+-6
+7
+images/gordonFoodsNotGordonRamsay.png
+YOU DONUT!
+Employees at Gordon Foods start a riot as it was revealed that Gordon Foods
+was not ran by Gordon Ramsay
+
+false
+Toronto Dominion Bank
+BANKING
+-3
+2
+-2
+8
+images/TDBANK.png
+Clean Getaway?
+One of the local Toronto Dominion Bank branches was recently robbed but no money
+was stolen, rather the bank robbers cleaned the store?
+
+false
+Scotia Bank
+BANKING
+-5
+4
+-4
+9
+images/bankrobberyScotia.png
+Inside Job!
+Scotia Bank Employee was convicted of robbing his own bank, truly an inside job
+
+false
+Bank of Montreal
+BANKING
+6
+6
+8
+10
+images/smokedmeat.jpg
+Smoked Meat Lover!
+Twitter discovered Bank of Montreal CEO's secret Twitter account where he posts
+his love for smoked meat sandwiches, a montreal classic.
+
+false
+Sunwing Airlines
+LUXURY
+-6
+7
+-7
+11
+images/desertisland.png
+Stranded Sunwing!
+Sunwing Airlines passengers stranded for hours on a desert island
+before help arrived
+
+false
+Best Western
+LUXURY
+-8
+2
+-8
+12
+images/bestwesternmorelikeworstwestern.png
+Worst Western!
+Best Western's standard of cleaning every hour is actually cleaning every
+2 hours
+
+false
+Rolls-Royce
+LUXURY
+10
+10
+10
+13
+images/MrYeast.png
+Mr Yeast x Rolls-Royce!
+Mr Yeast gives away a Rolls-Royce car in partnership with his own car model
+releasing next year
+
+true
+NA
+TECH
+-5
+2
+-4
+14
+images/toaster.png
+Toaster Troubles!
+Recent footage of a smart toaster during toast and singing the blues, will this technology
+lead to an existential crisis during breakfast?
+
+true
+NA
+TECH
+2
+3
+1
+15
+images/AIIcon.png
+AI-Phone?
+Smartphones are now equipped with AI Language Modules to help further progress
+your digital life
+
+true
+NA
+TECH
+5
+3
+2
+16
+images/Reverie.png
+New Programming Language!
+Tech Industry is going crazy over a new developed language titled Reverie
+
+true
+NA
+TECH
+8
+5
+4
+17
+images/GTAVI.png
+Game of the Year!
+Rockstar Games announces GTA VI will be released on all platforms
+
+true
+NA
+FOOD
+-5
+5
+-3
+18
+images/BeyondMeat.png
+Beyond the Meat?
+A recent study discovered that beyond meat has more products than actual meat, vegetarians are slowly considering a carnivore diet again
+
+true
+NA
+FOOD
+7
+5
+5
+19
+images/lowerFoodCosts.png
+Food for All!
+Celebrity Dietitian protests for lower food prices and to help out the homeless,
+her efforts paid off
+
+true
+NA
+BANKING
+-7
+2
+-3
+20
+images/digitalBanking.png
+A New Age of Banking Employment
+Digital Banking has slowly taking over in person banking, causes outrage for employees
+who need those jobs
+
+true
+NA
+BANKING
+7
+4
+4
+21
+images/securityLock.png
+Hacker Develops Security?
+Recent breakthrough in bank security as world renowned hacker devised a strategy
+to improve the security of banking globally
+
+true
+NA
+LUXURY
+-4
+4
+-2
+22
+images/goldfacemask.png
+24K Face Mask?
+High-end clothing designer releases new face mask plated in 24-Karat Gold
+Is this to make a statement or to glorify a pandemic necessity?
+
+true
+NA
+LUXURY
+8
+7
+5
+23
+images/charityGlobe.jpg
+Outrageous Brand, Kind Deed!
+Luxury Designer releases outrageously expensive clothing line, but half of those
+proceeds go to charities around the world.

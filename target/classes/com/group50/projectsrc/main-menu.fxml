@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane prefHeight="720.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group50.projectsrc.MainController">
+   <children>
+      <Pane fx:id="titleScreen" prefHeight="720.0" prefWidth="960.0">
+         <children>
+            <Label fx:id="titleText" alignment="CENTER" layoutX="-51.0" layoutY="70.0" prefHeight="48.0" prefWidth="668.0" text="Day Trader's Dairy">
+               <font>
+                  <Font name="System Bold" size="61.0" />
+               </font>
+            </Label>
+            <Button layoutX="570.0" layoutY="157.0" onAction="#onPlayButtonClick" prefHeight="57.0" prefWidth="333.0" text="Play">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button layoutX="570.0" layoutY="227.0" onAction="#onLeaderboardsButtonClick" prefHeight="57.0" prefWidth="333.0" text="Leaderboards">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button layoutX="570.0" layoutY="297.0" onAction="#onTutorialButtonClick" prefHeight="57.0" prefWidth="333.0" text="Tutorial">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button layoutX="570.0" layoutY="367.0" onAction="#onSettingsButtonClick" prefHeight="57.0" prefWidth="333.0" text="Settings">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button layoutX="570.0" layoutY="437.0" onAction="#onTeacherModeButtonClick" prefHeight="57.0" prefWidth="333.0" text="Teacher Mode">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button layoutX="570.0" layoutY="507.0" onAction="#onExitButtonClick" prefHeight="57.0" prefWidth="333.0" text="Exit">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="348.0" fitWidth="424.0" layoutX="71.0" layoutY="203.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="file:images/StockMoneyLogo.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="117.0" layoutY="599.0" prefHeight="48.0" prefWidth="726.0" text="Group 50 Developers: Lyndon, Josh, Alex, Duncan, Affan">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="71.0" layoutY="641.0" prefHeight="48.0" prefWidth="818.0" text="This game was created as part of CS2212 at Western University during the Winter of 2023/24">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane fx:id="leavingScreen" prefHeight="720.0" prefWidth="960.0" visible="false">
+         <children>
+            <Label fx:id="leavingConfirm" alignment="CENTER" layoutX="44.0" layoutY="193.0" prefHeight="75.0" prefWidth="872.0" text="Are you sure you want to quit?">
+               <font>
+                  <Font name="System Bold" size="51.0" />
+               </font>
+            </Label>
+            <Button layoutX="176.0" layoutY="360.0" onAction="#onLeaveCancelButtonClick" prefHeight="83.0" prefWidth="264.0" text="Cancel">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button layoutX="521.0" layoutY="360.0" onAction="#onLeaveExitButtonClick" prefHeight="83.0" prefWidth="264.0" text="Exit">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Pane fx:id="tutorialScreen" prefHeight="720.0" prefWidth="960.0" visible="false">
+         <children>
+            <Label layoutY="29.0" prefHeight="62.0" prefWidth="960.0">
+               <graphic>
+                  <AnchorPane prefHeight="62.0" prefWidth="889.0">
+                     <children>
+                        <Button fx:id="tutorialRightButton" layoutX="842.0" layoutY="8.0" onAction="#onTutorialRightButtonClick" prefHeight="60.0" prefWidth="60.0" text="&gt;" />
+                        <Label fx:id="tutorialTitleText" alignment="CENTER" layoutX="232.0" prefHeight="75.0" prefWidth="497.0" text="Tutorial">
+                           <font>
+                              <Font name="System Bold" size="61.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="tutorialLeftButton" layoutX="58.0" layoutY="8.0" onAction="#onTutorialLeftButtonClick" prefHeight="60.0" prefWidth="60.0" text="&lt;" />
+                     </children>
+                  </AnchorPane>
+               </graphic>
+            </Label>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" disable="true" fill="WHITE" height="511.0" layoutX="56.0" layoutY="132.0" stroke="BLACK" strokeType="INSIDE" width="848.0" />
+            <Button fx:id="tutorialExitButton" layoutX="760.0" layoutY="658.0" onAction="#onTutorialExitButtonClick" prefHeight="48.0" prefWidth="144.0" text="Exit" />
+            <Pane fx:id="tutorial1" layoutX="56.0" layoutY="135.0" prefHeight="505.0" prefWidth="848.0" visible="false">
+               <children>
+                  <Label alignment="TOP_CENTER" layoutX="189.0" layoutY="9.0" prefHeight="83.0" prefWidth="470.0" text="Welcome to Day Trader's Diary!">
+                     <font>
+                        <Font name="System Bold" size="26.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="TOP_LEFT" layoutX="43.0" layoutY="106.0" prefHeight="48.0" prefWidth="668.0" text="Have you ever wanted to try investing in the stock market without the risk? ">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="41.0" layoutY="149.0" text="Well Day Trader's Diary has got you covered!">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="41.0" layoutY="194.0" text="With the help of my Stock Monkey Market, you can now feel a 1-to-1 simulation!">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="41.0" layoutY="240.0" text="In this Tutorial, I will be going over what to expect in this game">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="41.0" layoutY="289.0" text="as well as the quirks in the system to help you succeed.">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="243.0" fitWidth="270.0" layoutX="570.0" layoutY="262.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:images/tutorial1.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="TOP_LEFT" layoutX="43.0" layoutY="65.0" prefHeight="48.0" prefWidth="668.0" text="They call me Stock Monkey, but you can call me Stonkey!">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="tutorial2" layoutX="56.0" layoutY="132.0" prefHeight="511.0" prefWidth="848.0" visible="false">
+               <children>
+                  <ImageView fitHeight="389.0" fitWidth="581.0" layoutX="168.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:images/tutorial2.0.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="100.0" layoutY="421.0" text="This is the main game screen! You will be doing most of your activities on here!">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="192.0" layoutY="455.0" text="Allow me to explain the basics of what we are looking at.">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="tutorial3" layoutX="56.0" layoutY="132.0" prefHeight="511.0" prefWidth="848.0" visible="false">
+               <children>
+                  <ImageView fitHeight="389.0" fitWidth="581.0" layoutX="168.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:images/tutorial2.1.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="39.0" layoutY="419.0" text="These are your stocks. Highlighted above is a Stock that is being displayed. Current holdings ">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="47.0" layoutY="445.0" text="and current prices of every stock will be shown. Changes happen frequently, so act quickly!">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="61.0" layoutY="471.0" text="Also, when you progress in Level, more stock categories are opened for you to invest in. ">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="tutorial4" layoutX="56.0" layoutY="132.0" prefHeight="511.0" prefWidth="848.0" visible="false">
+               <children>
+                  <ImageView fitHeight="389.0" fitWidth="581.0" layoutX="168.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:images/tutorial2.2.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="38.0" layoutY="419.0" text="Over here are buttons that you'll click to buy and sell your stocks. This is how you are going to">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="31.0" layoutY="445.0" text="make your money each day. While buying and selling, keep this saying in mind:  &quot;Buy low, ">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="45.0" layoutY="471.0" text="sell high!&quot; Also, remember that in each category of stocks, you only get a set amount to buy.">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="tutorial5" layoutX="56.0" layoutY="132.0" prefHeight="511.0" prefWidth="848.0" visible="false">
+               <children>
+                  <ImageView fitHeight="389.0" fitWidth="581.0" layoutX="168.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:images/tutorial3.0.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="73.0" layoutY="419.0" text="Oh no! What happened here! Looks like Apple is in a bit of trouble... This news article ">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="71.0" layoutY="445.0" text="seemed to have randomly appeared! Sometimes, the Monkey News will publish news ">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="23.0" layoutY="471.0" text="articles that will be displayed. Make sure to read and note which stocks will be impacted from this.">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="tutorial6" layoutX="56.0" layoutY="132.0" prefHeight="511.0" prefWidth="848.0" visible="false">
+               <children>
+                  <ImageView fitHeight="389.0" fitWidth="649.0" layoutX="100.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:images/tutorial4.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="66.0" layoutY="419.0" text="One last thing to note for the main game screen is the Money, Day, Time progression.">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="35.0" layoutY="445.0" text="Time goes up in increments every second, allowing you to trade for only a set amount of time">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="30.0" layoutY="471.0" text="as the market opens from 8am and closes at 4pm. Keep track of your time and money carefully!">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="tutorial7" layoutX="56.0" layoutY="132.0" prefHeight="511.0" prefWidth="848.0" visible="false">
+               <children>
+                  <ImageView fitHeight="389.0" fitWidth="563.0" layoutX="186.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:images/tutorial5.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="52.0" layoutY="419.0" text="Once time is up and the market is closed, you will be able to view your results for the day.">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="29.0" layoutY="445.0" text="All stocks will be liquidated to calculate how much you've earn (or lost!) and will display whether">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="79.0" layoutY="471.0" text="or not you've met the level up requirements. After this, you'll move to the next day.">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="tutorial8" layoutX="56.0" layoutY="132.0" prefHeight="511.0" prefWidth="848.0">
+               <children>
+                  <ImageView fitHeight="389.0" fitWidth="563.0" layoutX="186.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:images/tutorial6.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="99.0" layoutY="419.0" text="You are now officially a certified stock trader! I have nothing more to say to you my">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="76.0" layoutY="445.0" text="trader. Now go out and enjoy the freedom and adventure of stock trading! Good Luck!">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane fx:id="settings" layoutX="351.0" layoutY="215.0" prefHeight="193.0" prefWidth="314.0" style="-fx-border-color: black; -fx-background-color: white;" visible="false">
+         <children>
+            <Text layoutX="16.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Settings">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Text>
+            <Button fx:id="settingsExit" layoutX="162.0" layoutY="139.0" mnemonicParsing="false" onAction="#ExitBtn" prefHeight="36.0" prefWidth="138.0" text="Exit" />
+            <Slider fx:id="sfxSlider" layoutX="80.0" layoutY="48.0" prefHeight="15.0" prefWidth="211.0" snapToTicks="true" value="100.0" />
+            <Slider fx:id="musicSlider" layoutX="81.0" layoutY="77.0" prefHeight="15.0" prefWidth="211.0" value="100.0" />
+            <Text layoutX="22.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SFX" />
+            <Text layoutX="22.0" layoutY="91.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MUSIC" />
+            <Button layoutX="14.0" layoutY="139.0" mnemonicParsing="false" onAction="#audioConfirm" prefHeight="36.0" prefWidth="138.0" text="Confirm Changes" />
+            <Text layoutX="27.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="(Audio currently not avaliable for macOS)" wrappingWidth="270.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+   </children>
+</Pane>

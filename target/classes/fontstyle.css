@@ -1,0 +1,8 @@
+@font-face {
+    src: url('fonts/ARCADE_N.TTF');
+}
+
+.label{
+    -fx-font-family: 'Arcade-Normal';
+    -fx-font-size: 61;
+}

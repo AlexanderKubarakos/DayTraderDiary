@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group50.projectsrc.EODScreenController">
+   <children>
+      <Text layoutX="336.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="End Of Day Score" wrappingWidth="292.4716796875">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Text>
+      <Text fx:id="prevBal" layoutX="58.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Previous Balance: " wrappingWidth="463.03515625">
+         <font>
+            <Font size="24.0" />
+         </font></Text>
+      <Text fx:id="currBal" layoutX="58.0" layoutY="232.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current Balance: " wrappingWidth="440.4716796875">
+         <font>
+            <Font size="24.0" />
+         </font></Text>
+      <Text fx:id="balDiff" layoutX="58.0" layoutY="197.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Balance Difference: " wrappingWidth="469.845703125">
+         <font>
+            <Font size="24.0" />
+         </font></Text>
+      <Text layoutX="660.0" layoutY="148.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current Shares">
+         <font>
+            <Font size="24.0" />
+         </font></Text>
+      <TextArea fx:id="sharesList" editable="false" focusTraversable="false" layoutX="612.0" layoutY="169.0" prefHeight="409.0" prefWidth="252.0" scaleShape="false" wrapText="true">
+         <font>
+            <Font size="20.0" />
+         </font></TextArea>
+      <Button fx:id="doneButton" layoutX="762.0" layoutY="619.0" mnemonicParsing="false" onAction="#done" prefHeight="48.0" prefWidth="107.0" text="Done" />
+      <Text fx:id="liqCurrBal" layoutX="58.0" layoutY="413.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current Liquified Balance: " wrappingWidth="429.4716796875">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text fx:id="liqBalDiff" layoutX="58.0" layoutY="374.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Balance Difference:" wrappingWidth="440.4716796875">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text fx:id="prevLiqBal" layoutX="58.0" layoutY="337.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Previous Liquified Balance: " wrappingWidth="463.03515625">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text fx:id="tLevel" layoutX="58.0" layoutY="509.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current Level: " wrappingWidth="429.4716796875">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text fx:id="tLevelUp" layoutX="58.0" layoutY="543.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Earn X money more to unlock: " wrappingWidth="537.4716796875">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Text fx:id="tUnlock" layoutX="58.0" layoutY="579.0" strokeType="OUTSIDE" strokeWidth="0.0" text="You unlocked x!" wrappingWidth="429.4716796875">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+   </children>
+</Pane>

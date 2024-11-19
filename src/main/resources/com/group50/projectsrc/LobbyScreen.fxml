@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.group50.projectsrc.LobbyScreen">
+   <children>
+      <Button layoutX="320.0" layoutY="565.0" mnemonicParsing="false" onAction="#nextDay" prefHeight="63.0" prefWidth="346.0" text="Next Day" />
+      <Text layoutX="353.0" layoutY="96.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Before Next Day">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Text>
+      <Text layoutX="152.0" layoutY="329.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current Day:">
+         <font>
+            <Font size="25.0" />
+         </font></Text>
+      <Text fx:id="currentDay" layoutX="300.0" layoutY="329.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+         <font>
+            <Font size="25.0" />
+         </font></Text>
+      <Text layoutX="152.0" layoutY="213.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current Balance:">
+         <font>
+            <Font size="25.0" />
+         </font></Text>
+      <Text fx:id="currentMoney" layoutX="344.0" layoutY="216.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+         <font>
+            <Font size="25.0" />
+         </font></Text>
+      <Button fx:id="logOutButton" layoutX="832.0" layoutY="19.0" mnemonicParsing="false" onAction="#logOut" prefHeight="63.0" prefWidth="100.0" text="Log out" />
+      <Text layoutX="381.0" layoutY="531.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Days left: ">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Text>
+      <Text fx:id="daysLeft" layoutX="529.0" layoutY="531.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Text>
+      <Button fx:id="restartAccountButton" layoutX="14.0" layoutY="666.0" mnemonicParsing="false" onAction="#restartAccount" prefHeight="40.0" prefWidth="107.0" text="Restart Account" />
+      <Text fx:id="tLevel" layoutX="152.0" layoutY="387.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current Level: XXX" wrappingWidth="228.91552734375">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Text>
+      <Text fx:id="tLiqMoney" layoutX="152.0" layoutY="272.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current Liquidated Money: " wrappingWidth="514.91552734375">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Text>
+   </children>
+</Pane>
